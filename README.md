@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
  <b>car-edit: <b> This component allows you to edit the car data or create a new car.
 
     In the owner field, just add the ID of the owner who is registered.
-   @octocat :+1: This PR looks great - it's ready to merge! :shipit:
+ :+1: This PR looks great - it's ready to merge! :shipit:
    
     
     
