@@ -15,12 +15,15 @@
                         </mat-form-field>
                     </div>
                     <div *ngIf="car.href">
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect1">Owner Dni</label>
-                            <select class="form-control" placeholder="Owner Dni" [(ngModel)]="car.ownerDni" name="ownerDni" #ownerDni>
-                          <option [value]="owner.dni" *ngFor="let owner of owners">{{owner.dni}}</option>
-                        </select>
-                        </div>
+                        <h4>Owner Dni</h4>
+                        <mat-form-field appearance="fill">
+                            <mat-label>choose owner</mat-label>
+                            <mat-select class="form-control" placeholder="Owner Dni" [(ngModel)]="car.ownerDni" name="ownerDni" #ownerDni>
+                                <mat-option [value]="owner.dni" *ngFor="let owner of owners">
+                                    {{owner.dni}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
                     </div>
                 </mat-card-content>
                 <mat-card-actions>

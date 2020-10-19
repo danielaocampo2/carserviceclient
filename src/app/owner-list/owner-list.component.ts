@@ -3,7 +3,6 @@ import { OwnerService } from '../shared/owner/owner.service';
 import {ThemePalette} from '@angular/material/core';
 import { CarService } from '../shared/car/car.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
 
 export interface Task {
   name: string;
@@ -39,7 +38,15 @@ export class OwnerListComponent implements OnInit {
 
 
 
-  updateAllComplete() {
+  updateAllComplete(owner) {
+    if (this.selectedOwners.indexOf(owner) === -1) {
+        this.selectedOwners.push(owner);
+    } else if (this.selectedOwners.indexOf(owner) > -1) {
+        let indice =  this.selectedOwners.indexOf(owner);
+         this.selectedOwners.splice(indice, 1);
+    }
+
+    console.log( this.selectedOwners);
     this.allComplete = this.owners != null && this.owners.every(t => t.completed);
   }
 
@@ -51,6 +58,16 @@ export class OwnerListComponent implements OnInit {
   }
 
   setAll(completed: boolean) {
+
+    for(const owner of this.owners){
+      if (this.selectedOwners.indexOf(owner) === -1) {
+        this.selectedOwners.push(owner);
+    } else if (this.selectedOwners.indexOf(owner) > -1) {
+        let indice =  this.selectedOwners.indexOf(owner);
+         this.selectedOwners.splice(indice, 1);
+    }
+    }
+
     this.allComplete = completed;
     if (this.owners == null) {
       return;
@@ -59,11 +76,14 @@ export class OwnerListComponent implements OnInit {
   }
 
   delete(){
-    console.log(this.selectedOwners);
+    if(this.selectedOwners.length==0){
+      alert("select an owner, please");
+    }
+    else{
     for(const owner of this.selectedOwners){
-      console.log(owner);
       this.remove(owner);}
       this.goToList();
+    }
   }
 
   remove(owner){

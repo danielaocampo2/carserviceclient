@@ -2,10 +2,19 @@
     <mat-card-title>Owners List</mat-card-title>
     <section class="example-section">
         <span class="example-list-section">
+        <mat-checkbox class="example-margin"
+                      [checked]="allComplete"
+                      [indeterminate]="someComplete()"
+                      (change)="setAll($event.checked)">
+          Select all
+        </mat-checkbox>
+      </span>
+        <span class="example-list-section">
         <ul>
           <li *ngFor="let owner of owners">
-            <mat-checkbox (change)="selectedOwners.push(owner)"
-                          (ngModelChange)="updateAllComplete()">
+            <mat-checkbox [(ngModel)]="owner.completed"
+
+                          (ngModelChange)="updateAllComplete(owner)">
               {{owner.name}}
             </mat-checkbox>
             <a mat-button [routerLink]="['/owner-edit', owner.dni]">edit</a>

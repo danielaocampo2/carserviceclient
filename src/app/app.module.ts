@@ -14,6 +14,7 @@ import { MatCheckboxModule,
          MatInputModule,
          MatListModule,
          MatToolbarModule,
+         MatSelectModule,
          MatMenuModule } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -45,8 +46,8 @@ import { OwnerEditComponent } from './owner-edit/owner-edit.component';
     FormsModule,
     MatCheckboxModule,
     MatIconModule,
-    MatMenuModule
-
+    MatMenuModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],

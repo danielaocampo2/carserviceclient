@@ -15,7 +15,6 @@ export class CarEditComponent implements OnInit, OnDestroy {
   car: any = {};
   owners:any = {};
   sub: Subscription;
-  owner: any = {};
 
   constructor(private route: ActivatedRoute,
               private router: Router,

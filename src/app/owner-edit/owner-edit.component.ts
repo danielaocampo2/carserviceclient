@@ -23,7 +23,7 @@ export class OwnerEditComponent implements OnInit, OnDestroy {
     this.sub = this.route.params.subscribe(params => {
     const dni = params['dni'];
     if (dni){
-      this.ownerService.getByDni(dni).subscribe((data: any) => { // Obtener owner por dni
+      this.ownerService.getByDni(dni).subscribe((data: any) => {
         if(data){
           this.owner = data[0];
         }
@@ -40,6 +40,7 @@ export class OwnerEditComponent implements OnInit, OnDestroy {
     }
 
     save(form: NgForm){
+      console.log(form);
       this.ownerService.save(form).subscribe(result => {
         this.goToList();
       }, error => console.error(error));
@@ -55,10 +56,8 @@ export class OwnerEditComponent implements OnInit, OnDestroy {
           }
         }
       });
-    this.ownerService.remove(id).subscribe(result => {
-       this.goToList();
-     }, error => console.error(error));
+      this.ownerService.remove(id).subscribe(result => {
+           this.goToList();
+       }, error => console.error(error));
     }
-
-
 }
