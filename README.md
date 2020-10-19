@@ -2,13 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
 
-## Components
+## Components :blue_car:
 
- <b>car-edit: <b> This component allows you to edit the car data or create a new car.
+ **car-edit:**
+ -This component allows you to edit the car data or create a new car.
+  In the owner field, just add the ID of the owner who is registered.
 
-    In the owner field, just add the ID of the owner who is registered.
- :+1: This PR looks great - it's ready to merge! :shipit:
- :fearful:
    
     
     
