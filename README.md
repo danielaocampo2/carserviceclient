@@ -8,8 +8,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
      -This component allows you to edit the car data or create a new car.
      -In the owner field, just add the ID of the owner who is registered.
 
-- **car-edit:**
-   -This component allows you to edit the car data or create a new car.
+- **car-edit:** </br>
+   -This component allows you to edit the car data or create a new car. </br>
    -In the owner field, just add the ID of the owner who is registered.
 - John Adams
 - Thomas Jefferson
