@@ -4,9 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Components :blue_car:
 
- **car-edit:**
- -This component allows you to edit the car data or create a new car.
-  In the owner field, just add the ID of the owner who is registered.
+ 1. **car-edit:**
+     -This component allows you to edit the car data or create a new car.
+     -In the owner field, just add the ID of the owner who is registered.
 
    
     
