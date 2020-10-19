@@ -8,8 +8,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
      -This component allows you to edit the car data or create a new car.
      -In the owner field, just add the ID of the owner who is registered.
 
-   100. Primer elemento de la lista
-     - Primer elemento de la lista anidada
+- George Washington
+- John Adams
+- Thomas Jefferson
     
     
 
