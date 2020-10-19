@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-card-title>Cart and Owner List</mat-card-title>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Photo</th>
+                <th scope="col">Name</th>
+                <th scope="col">Owner</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let car of cars">
+                <th scope="row"><img avatar src="{{car.giphyUrl}}" alt="{{car.name}}" class="img-size rounded"></th>
+                <td>{{car.name}}</td>
+                <div *ngFor="let owner of owners">
+                    <td *ngIf="car.ownerDni == owner.dni && car.ownerDni!=null "><a mat-button [routerLink]="['/owner-edit',owner.dni]">{{ owner.name}}</a></td>
+                </div>
+            </tr>
+        </tbody>
+    </table>
+</mat-card>

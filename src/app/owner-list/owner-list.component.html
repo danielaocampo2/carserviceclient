@@ -1,0 +1,26 @@
+<mat-card>
+    <mat-card-title>Owners List</mat-card-title>
+    <section class="example-section">
+        <span class="example-list-section">
+        <ul>
+          <li *ngFor="let owner of owners">
+            <mat-checkbox (change)="selectedOwners.push(owner)"
+                          (ngModelChange)="updateAllComplete()">
+              {{owner.name}}
+            </mat-checkbox>
+            <a mat-button [routerLink]="['/owner-edit', owner.dni]">edit</a>
+        </li>
+        </ul>
+        </span>
+    </section>
+    <mat-divider></mat-divider>
+    <div class="col-sm-8 col-xs-8">
+        <button mat-fab color="primary" style="margin: 10px" (click)="delete()" aria-label="Example icon button with a delete icon">
+              <mat-icon>delete</mat-icon>
+            </button>
+        <button mat-fab color="warn" [routerLink]="['/owner-add']" aria-label="Example icon button with a home icon">
+             <b>ADD</b>
+            </button>
+    </div>
+
+</mat-card>

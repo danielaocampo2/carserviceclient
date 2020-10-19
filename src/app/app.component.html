@@ -1,5 +1,19 @@
 <mat-toolbar color="primary">
-  <span>Welcome to {{title}}!</span>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+      <span  [routerLink]="['/owner-list']">OWNER LIST</span>
+    </button>
+        <button mat-menu-item>
+      <span [routerLink]="['/car-owner-list']">CAR AND OWNER</span>
+    </button>
+        <button mat-menu-item>
+      <span [routerLink]="['/car-list']" >CAR LIST</span>
+    </button>
+    </mat-menu>
+    <span>Welcome to {{title}}!</span>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
